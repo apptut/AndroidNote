@@ -10,4 +10,4 @@
 
 欢迎交流：<liangqi000@gmail.com>
 
-<img src="../images/cover-medium.jpg" style="width:70%" />
+<img src="./images/cover-medium.jpg" style="width:70%" />
