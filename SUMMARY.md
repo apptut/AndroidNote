@@ -9,4 +9,6 @@
    * [dex2jar反编译java](common_tools/dex2jarjava.md)
    * [常用adb命令](common_tools/adb_command.md)
    * [获取手机root权限](common_tools/get_your_phone_root.md)
+* [view界面操作](view/README.md)
+   * [隐藏状态栏](view/hide_status_bar.md)
 

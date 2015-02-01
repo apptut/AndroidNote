@@ -6,4 +6,8 @@
 
 本书的源文件已托管到`github`上：<https://github.com/apptut/AndroidNote>，并且在持续更新当中，写不完的代码，填不完的坑..
 
+在线阅读地址：<http://apptut.com/android-note/> 或者 <http://apptut.gitbooks.io/android-note/>
+
 欢迎交流：<liangqi000@gmail.com>
+
+<img src="../images/cover-medium.jpg" style="width:70%" />
