@@ -10,6 +10,8 @@
    * [常用adb命令](common_tools/adb_command.md)
    * [获取手机root权限](common_tools/get_your_phone_root.md)
    * [手机抓包工具](common_tools/capture_data.md)
+   * [使用Gradle插件](common_tools/use_gradle.md)
 * [view界面操作](view/README.md)
    * [隐藏状态栏](view/hide_status_bar.md)
+   * [listview常用技巧](view/listview_note.md)
 
