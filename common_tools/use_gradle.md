@@ -66,8 +66,61 @@ release {
 }
 ```
 
+**1.3 buildTypes**
 
-**gradle模板：**
+`buildTypes`用来指定最终编译字段配置。
+
+```
+release {
+        minifyEnabled true                      #是否压缩
+        proguardFiles 'proguard.cfg'            #是否混淆
+        signingConfig signingConfigs.release    #签名
+
+        // 定制不同渠道修改此处即可 覆盖defaultConfig 渠道字段后的release包
+        // manifestPlaceholders = [channelValue: "6"]
+}
+```
+
+**1.4 sourceSets资源配置**
+
+该字段下主要配置一些项目资源路径。
+
+**1.5 productFlavors渠道包字段**
+
+该字段用来打不同的渠道包，如果不同的渠道包下有不同的文件需要合并，那么只需要在`src/`目录下建立以渠道名作为根目录的根目录即可：
+
+```sh
+#自定义两个渠道，渠道名为Channel123，Official渠道
+"Channel123"{
+    manifestPlaceholders = [channelValue: "1"]
+}
+// 官方渠道
+"Official" {
+    manifestPlaceholders = [channelValue: "6"]
+}
+
+```
+如上述描述两个渠道，如果说两个渠道的某些项目文件不一样，那么可以以各自的渠道名作为根目录建立各自不同的项目文件路径即可：
+
+```sh
+src/
+    main/
+        #全局的代码
+        images/     #假设有一个图片文件下有俩文件
+            a.png
+            b.png
+    Channel123/
+        #此频道下自己不同的文件，任何文件，覆盖main下文件即可,相同的文件路径
+        images/
+            a.png   #如果a.png不一样，那么直接覆盖即可
+
+    Offcial/
+        #类比Channel123
+```
+
+
+**2. gradle示例模板：**
+
 ```sh
 android {
     compileSdkVersion 19
