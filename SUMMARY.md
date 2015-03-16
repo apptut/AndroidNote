@@ -3,6 +3,7 @@
 * [本书简介](README.md)
 * [常用字符串处理](common_string_util/README.md)
    * [时间字符串格式化](common_string_util/format_date_time_string.md)
+   * [获取url参数](common_string_util/get_url_params.md)
 * [常用工具](common_tools/README.md)
    * [apktool反编译apk包](common_tools/apktoolapk.md)
    * [keytool查看签名](common_tools/use_keytool.md)
@@ -14,4 +15,8 @@
 * [view界面操作](view/README.md)
    * [隐藏状态栏](view/hide_status_bar.md)
    * [listview常用技巧](view/listview_note.md)
+* [常用自定义控件](view_custom/README.md)
+   * [自定义checkbox](view_custom/custom_checkbox.md)
+* [多线程相关](multithreading/README.md)
+   * [executeService使用](multithreading/executeservice.md)
 
