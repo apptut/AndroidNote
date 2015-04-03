@@ -15,3 +15,11 @@ String time = new SimpleDateFormat("yyyy-MM-dd HH:mm E").format(date);
 
 //解析后为: 2015-01-18 09:47 周日
 ```
+
+#### 2. 格式化毫秒值
+
+```java
+public String getTimeStr(long timestamp){
+    return new SimpleDateFormat("yyyy-MM-dd").format(new Date(timestamp));
+}
+```

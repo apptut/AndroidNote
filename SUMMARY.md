@@ -16,6 +16,7 @@
    * [隐藏状态栏](view/hide_status_bar.md)
    * [listview常用技巧](view/listview_note.md)
    * [软键盘操作](view/soft_keyborad.md)
+   * [EditText文字监听](view/textview__text_change_listener.md)
 * [常用自定义控件](view_custom/README.md)
    * [自定义checkbox](view_custom/custom_checkbox.md)
 * [多线程相关](multithreading/README.md)
