@@ -122,6 +122,15 @@ src/
 **2. gradle示例模板：**
 
 ```sh
+// 添加打包生成apk的时间
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+def getDateTime() {
+    DateFormat df = new SimpleDateFormat("YYYY_MM_dd_HH_mm",Locale.US);
+    return df.format(new Date());
+}
+
 android {
     compileSdkVersion 19
     buildToolsVersion '19.1.0'
@@ -155,6 +164,18 @@ android {
 
             // 定制不同渠道修改此处即可 覆盖defaultConfig 渠道字段后的release包
             // manifestPlaceholders = [channelValue: "6"]
+        }
+
+        debugDaily {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.dailybuild
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def file = output.outputFile
+                    output.outputFile = new File(file.parent, file.name.replace(".apk", "-" + defaultConfig.versionName + "-" + getDateTime() + ".apk"))
+                }
+            }
         }
     }
 
